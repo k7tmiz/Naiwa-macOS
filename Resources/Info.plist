@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>zh_CN</string>
+    <key>CFBundleExecutable</key>
+    <string>Naiwa</string>
+    <key>CFBundleIdentifier</key>
+    <string>local.naiwa.desktoppet</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>Naiwa</string>
+    <key>CFBundleDisplayName</key>
+    <string>奶蛙桌宠</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.2.2</string>
+    <key>CFBundleVersion</key>
+    <string>1.2.2</string>
+    <key>CFBundleIconFile</key>
+    <string>naiwa.icns</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>11.0</string>
+    <key>LSUIElement</key>
+    <true/>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+    <key>LSApplicationCategoryType</key>
+    <string>public.app-category.entertainment</string>
+    <key>NSHumanReadableCopyright</key>
+    <string>奶蛙桌宠原项目 © yugh6 (https://github.com/yugh6/Naiwa)。本 macOS 版本为个人使用目的的非官方移植，素材版权归原作者所有。</string>
+</dict>
+</plist>
