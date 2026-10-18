@@ -1,5 +1,7 @@
 # 奶蛙桌宠 · macOS 移植版（非官方）
 
+![Build macOS App](https://github.com/k7tmiz/Naiwa-macOS/actions/workflows/release.yml/badge.svg)
+
 > 本项目是 [**yugh6/Naiwa**](https://github.com/yugh6/Naiwa) 的**非官方 macOS 移植版**。
 > 原项目是一款 Windows（.NET Framework 4.x / WinForms）桌宠，版本 v1.2.2 原始素材版。
 >
@@ -19,7 +21,8 @@
 
 ## 下载 / 安装
 
-- 在 [Releases](../../releases) 下载 `奶蛙桌宠-macOS.zip`，解压后双击 `奶蛙桌宠.app`。
+- 在 [Releases](../../releases) 下载 `Naiwa-macOS.zip`，解压后双击 `奶蛙桌宠.app`。
+  Release 由 GitHub Actions 在 macOS runner 上自动构建（Apple Silicon / arm64）。
 - 应用为本地 ad-hoc 签名、未经过 Apple 公证。若首次打开被 Gatekeeper 拦截：
   右键 App →「打开」，或执行
   `xattr -dr com.apple.quarantine 奶蛙桌宠.app`。
@@ -44,6 +47,19 @@ NAIWA_ASSETS=/path/to/素材目录 ./build.sh
 
 ```sh
 swift run Naiwa --assets assets
+```
+
+## 自动构建与发布
+
+`.github/workflows/release.yml` 会在 GitHub Actions 的 macOS runner 上构建并测试：
+
+- 推送到 `main`：构建 + 非阻塞自检，产物保存为 Actions Artifact。
+- 推送 `v*` 标签：构建并自动创建/更新对应的 GitHub Release（附 zip 与 SHA-256）。
+- 也可以在 Actions 页面手动运行 `Build macOS App`，填写要发布的标签。
+
+```sh
+git tag v1.2.2-macos
+git push origin v1.2.2-macos   # 触发自动构建并发布 Release
 ```
 
 ## 功能对照（与 Windows 原版一致）
